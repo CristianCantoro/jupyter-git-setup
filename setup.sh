@@ -16,9 +16,12 @@ function changedir {
 }
 
 script_dir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
-changedir "$script_dir"
 
-repo_root="$(git rev-parse --show-toplevel)"
+# get top-level directory of the report even if inside submodule
+# See:
+#   https://stackoverflow.com/a/7359782/2377454
+repo_root="$(git rev-parse --show-superproject-working-tree --show-toplevel |\
+             head -n1)"
 changedir "$repo_root"
 
 # set custom diff commands
