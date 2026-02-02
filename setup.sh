@@ -28,9 +28,9 @@ changedir "$repo_root"
 git config diff.ipynb.textconv 'jupytext --pipe black --to jupytext//py --output -'
 
 mkdir -p "${repo_root}/.git/info/"
-cp -v "${repo_root}/setup/git/info"/* "${repo_root}/.git/info/"
+cp -v "${script_dir}/git/info"/* "${repo_root}/.git/info/"
 
 mkdir -p "${repo_root}/.git/hooks/"
-cp -v "${repo_root}/setup/git/hooks"/* "${repo_root}/.git/hooks/"
+cp -v "${script_dir}/git/hooks"/* "${repo_root}/.git/hooks/"
 
 exit 0
