@@ -44,13 +44,13 @@ pip3 install jupytext nbdime black flake8
 ### Add this repository as a submodule to your repo
 
 ```bash
-git submodule add https://github.com/CristianCantoro/jupyter-git-setup.git setup
+git submodule add https://github.com/CristianCantoro/jupyter-git-setup.git .setup
 ```
 
 ### Usage
 
 ```bash
-cd setup
+cd .setup
 ./setup.sh
 ```
 
